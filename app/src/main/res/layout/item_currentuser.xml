@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginBottom="10dp"
-        android:background="#CDCCCC" />
+        />
 
 
     <TextView
@@ -19,34 +19,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="50dp"
-
         android:text="TextView"
         android:textSize="16dp"
         tools:text="username" />
 
-    <ImageView
-        android:id="@+id/ivImage"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginBottom="10dp"
-        android:scaleType="centerCrop"
-        tools:srcCompat="@tools:sample/avatars" />
-
 
     <TextView
-        android:id="@+id/tvNumbers"
+        android:id="@+id/tvRank"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
-        android:text="feed description"
+        android:text="Rank"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="22sp" />
-
-    <TextView
-        android:id="@+id/tvUpdatedAt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="updated at"
-        android:textSize="14dp" />
 
 </LinearLayout>

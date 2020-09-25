@@ -186,7 +186,6 @@ public class ChatActivity extends Fragment {
                             Toast.makeText(getActivity(), "Successfully created message on Parse",
                                     Toast.LENGTH_SHORT).show();
                             refreshMessages();
-                            ParseUser.getCurrentUser().set('point', ParseUser.getCurrentUser().get("point")+1);
                         }
                     }
                 });

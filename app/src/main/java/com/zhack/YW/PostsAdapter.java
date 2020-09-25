@@ -89,7 +89,7 @@ public class PostsAdapter extends RecyclerView.Adapter {
             super(itemView);
             tvUsername = itemView.findViewById(R.id.tvName);
             ivImage = itemView.findViewById(R.id.ivImage);
-            tvDescription = itemView.findViewById(R.id.tvDescription);
+            tvDescription = itemView.findViewById(R.id.tvNumbers);
             tvUpdatedAt = itemView.findViewById(R.id.tvUpdatedAt);
         }
     }

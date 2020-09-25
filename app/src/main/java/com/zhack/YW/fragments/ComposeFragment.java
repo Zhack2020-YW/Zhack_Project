@@ -26,6 +26,7 @@ import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 
+import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseUser;
@@ -95,6 +96,7 @@ public class ComposeFragment extends Fragment {
         ivPostImage = view.findViewById(R.id.ivPostImage);
         btnSubmit = view.findViewById(R.id.btnSubmit);
         btnGallery = view.findViewById(R.id.btnGallery);
+
 
         requiredUserPermission();
 
@@ -256,6 +258,10 @@ public class ComposeFragment extends Fragment {
                 ivPostImage.setImageResource(0);
             }
         });
+        int point = (int) (ParseUser.getCurrentUser().get("Point"))+1;
+        Log.i("Point", "Incres!!!!!!!!!!!!!");
+        ParseUser.getCurrentUser().put("Point", point);
+        ParseUser.getCurrentUser().saveInBackground();
     }
 
     private void savePost(String description, ParseUser currentUser, File photoFile) {

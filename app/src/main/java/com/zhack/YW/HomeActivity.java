@@ -12,6 +12,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.Parse;
 import com.zhack.YW.fragments.ChatActivity;
 import com.zhack.YW.fragments.Feedfragment;
+import com.zhack.YW.fragments.ProfileFragment;
+import com.zhack.YW.fragments.RankFragment;
+import com.zhack.YW.fragments.UserFragment;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -27,6 +30,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        getSupportActionBar().hide();
 
         Parse.setLogLevel(Parse.LOG_LEVEL_DEBUG);
 
@@ -52,7 +56,12 @@ public class HomeActivity extends AppCompatActivity {
                     case R.id.action_feed:
                         fragment = new Feedfragment();
                         break;
-//                    case R.id.action_profile:
+                    case R.id.action_profile:
+                        fragment = new UserFragment();
+                        break;
+                    case R.id.action_rank:
+                        fragment = new RankFragment();
+                        break;
                     default:
                         fragment = new Feedfragment();
                         break;
